@@ -1,0 +1,135 @@
+# === Unity-spezifische Verzeichnisse ===
+
+[Ll]ibrary/          
+# Enthält alle importierten und zwischengespeicherten Daten von Unity 
+# (z. B. kompilierte Shader, Texture-Cache, Metadaten). 
+# Wird bei jedem Start aus den Assets neu generiert → nicht versionsrelevant.
+
+[Tt]emp/            
+# Temporäre Dateien, die Unity während des Builds oder Play-Modus erzeugt. 
+# Werden automatisch gelöscht/neu erstellt.
+
+[Oo]bj/             
+# Kompilierte Zwischenstände (ähnlich wie bin/obj in C#-Projekten). 
+# Gehören nicht ins Repo, da sie aus dem Code neu generierbar sind.
+
+[Bb]uild/           
+[Bb]uilds/          
+# Hier landen fertige Spiel-Builds oder Testversionen. 
+# Große Binärdateien, nicht relevant für Versionskontrolle.
+
+[Ll]ogs/            
+# Log-Dateien mit Editor- oder Build-Protokollen. 
+# Nur lokal nützlich zum Debuggen, nicht für das Team relevant.
+
+[Mm]emoryCaptures/  
+# Speicher-Dumps für Performance-Analysen. 
+# Enthalten riesige Binärdaten, die automatisch generiert werden.
+
+UserSettings/       
+# Persönliche Unity-Editor-Einstellungen (Layout, letzte Szenen, Pfade). 
+# Variieren pro Entwickler → nicht teamrelevant.
+
+sysinfo.txt         
+# Wird bei Abstürzen erstellt und enthält Systeminformationen. 
+# Nicht versionsrelevant.
+
+---
+
+# === IDE-bezogene Dateien ===
+
+.vscode/            
+# Lokale VS Code-Projektkonfigurationen (z. B. Extensions, Debug-Settings). 
+# Persönlich, daher ignorieren.
+
+.vs/                
+# Visual Studio-Arbeitsdateien (Projekt-Cache). 
+# Lokale Indexdaten, nicht versionsrelevant.
+
+*.sln               
+# Visual Studio Solution-Dateien, werden von Unity automatisch erzeugt. 
+# Können bei jedem Entwickler unterschiedlich aussehen.
+
+*.csproj            
+# C#-Projektdateien, ebenfalls von Unity generiert. 
+# Nicht nötig im Repo, da sie vom Editor bei Bedarf erstellt werden.
+
+*.unityproj         
+# Alte Unity-Projektdateien (historisch). 
+# Wird von neuen Unity-Versionen nicht mehr verwendet.
+
+*.pidb              
+# Debug-/Index-Dateien für IntelliSense und Autovervollständigung. 
+# Editor-spezifisch, nicht versionsrelevant.
+
+*.user              
+# Benutzerbezogene IDE-Settings (z. B. Fensterlayout). 
+# Nie zwischen Entwicklern teilen.
+
+*.booproj           
+# Von Unity generiert für Boo-Skripte (veraltet). 
+# Wird heute nicht mehr genutzt.
+
+*.svd               
+# Visual Studio-Debugger-Dateien. 
+# Temporär, nicht versionsrelevant.
+
+---
+
+# === Unity Package Manager ===
+
+Packages/com.unity.package-manager*  
+# Lokaler Cache und Log-Dateien des Package Managers. 
+# Unity lädt benötigte Packages automatisch anhand von manifest.json.
+
+*.unitypackage      
+# Exportierte Unity-Pakete (manuelle Backups). 
+# Große Binärdateien, gehören nicht ins Repo.
+
+---
+
+# === Crash- und Temp-Dateien ===
+
+*.stackdump         
+# Dump-Dateien nach Abstürzen. Nur zur Fehleranalyse, nicht versionsrelevant.
+
+*.tmp               
+# Temporäre Dateien allgemeiner Art. 
+# Entstehen beim Speichern oder Kompilieren.
+
+*.bak               
+# Backup-Dateien (oft automatisch von Texteditoren erstellt). 
+# Nur lokal nützlich.
+
+*.swp               
+# Swap-Dateien (z. B. von Vim oder Notepad++ beim Editieren). 
+# Temporär, nicht versionsrelevant.
+
+---
+
+# === Betriebssystem-Dateien ===
+
+.DS_Store           
+# macOS-Ordner-Metadaten (Position, Ansicht). 
+# Nur für Finder sichtbar, nicht für Projekte relevant.
+
+Thumbs.db           
+# Windows-Vorschaudateien für Icons/Thumbnails. 
+# Systemintern, unnötig für Versionierung.
+
+Desktop.ini         
+# Windows-Systemdatei für Ordnerdarstellung. 
+# Ebenfalls unnötig für Git.
+
+---
+
+# === Sonstige Caches & Tools ===
+
+ExportedObj/        
+# Zwischendateien beim Exportieren von Assets. 
+# Nicht reproduzierbar oder relevant für andere Entwickler.
+
+Assets/AssetStoreTools*  
+# Unity Asset Store Upload-Tools (lokal installiert). 
+# Kein Bestandteil eures Spiels, nur Entwickler-Tool.
+
